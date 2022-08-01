@@ -1,4 +1,5 @@
 #include "stdio.h"
+#include "stdlib.h"
 
 struct node
 {
@@ -13,6 +14,7 @@ void display_all_elements(struct node *n);
 
 void display_all_elements(struct node *n) 
 {
+    
     while (n != NULL)
     {
         printf("%d,",n->data_element);
@@ -46,7 +48,7 @@ int main(void)
     third_element->next = NULL;
 
     display_all_elements(first_element);
-
+    printf("\n");
     free(first_element);
     free(second_element);
     free(third_element);
